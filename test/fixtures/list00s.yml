@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  event: one
+  title: MyString
+  list_type: MyString
+  envent_status: MyString
+  created_at: 2023-09-05 16:24:30
+
+two:
+  user: two
+  event: two
+  title: MyString
+  list_type: MyString
+  envent_status: MyString
+  created_at: 2023-09-05 16:24:30

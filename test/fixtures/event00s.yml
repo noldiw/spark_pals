@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  event_type: MyString
+  user: one
+  event_description: MyText
+  from_datetime: 2023-09-05 16:25:50
+  to_datetime: 2023-09-05 16:25:50
+  event_location: MyString
+
+two:
+  title: MyString
+  event_type: MyString
+  user: two
+  event_description: MyText
+  from_datetime: 2023-09-05 16:25:50
+  to_datetime: 2023-09-05 16:25:50
+  event_location: MyString
