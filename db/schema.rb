@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_05_142550) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_06_152956) do
   create_table "event00s", force: :cascade do |t|
     t.string "title"
     t.string "event_type"
@@ -37,6 +37,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_142550) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
+  create_table "events__forces", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "eventso", force: :cascade do |t|
+    t.string "title"
+    t.string "event_type"
+    t.integer "user_id", null: false
+    t.text "event_description"
+    t.datetime "from_datetime"
+    t.datetime "to_datetime"
+    t.string "event_location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "list00s", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "event_id", null: false
@@ -58,6 +75,44 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_142550) do
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_lists_on_event_id"
     t.index ["user_id"], name: "index_lists_on_user_id"
+  end
+
+  create_table "lists__forces", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "listso", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.string "title"
+    t.string "list_type"
+    t.string "event_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_events", force: :cascade do |t|
+    t.string "title"
+    t.string "event_type"
+    t.integer "user_id", null: false
+    t.text "event_description"
+    t.datetime "from_datetime"
+    t.datetime "to_datetime"
+    t.string "event_location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_events_on_user_id"
+  end
+
+  create_table "user_lists", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.string "title"
+    t.string "list_type"
+    t.string "event_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -22,6 +22,8 @@ applicationcss
  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
+
+ /* Home page CSS */
  body {
   margin: 0;
   overflow: hidden;
@@ -53,7 +55,7 @@ applicationcss
   font-weight: 600;
   font-size: 18px;
   color: #000;
-  background-color: #FCBF49;; /* Button background color */
+  background-color: #FCBF49; /* Button background color */
   padding: 10px 20px;
   margin: 10px;
   border: none;
@@ -65,8 +67,9 @@ applicationcss
 }
 
 .button:hover {
-  background-color: #94D2BD; /* Change the background color on hover */
-  color: #fff;
+   /* Change the background color on hover */
+   background-color: #C8B6FF;
+  color: #F9F8F5;
 }
 
  .background-container {
@@ -123,3 +126,135 @@ applicationcss
     transform: translate(calc(100vw - 84px), calc(100vh - 68px));
   }
 }
+
+
+ /* profile page CSS */
+ /* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Background color for the body */
+.body-background {
+  background-color: #F9F8F5;
+}
+
+/* Container for the user profile */
+.container-profile {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: #94D2BD;
+}
+
+/* Avatar image on the left */
+.avatar-image {
+  border-radius: 50%;
+  max-width: 150px;
+}
+
+/* Right side of the user profile */
+.container-right-profile {
+  float: right;
+  width: calc(100% - 150px); /* Adjust for the avatar width */
+}
+
+/* Top section containing user name and email */
+.container-top-user-info {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #F9F8F5;
+  padding: 20px;
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Display email and user name text one on top of the other */
+  justify-content: center; /* Center vertically within the container */
+  align-items: center; /* Center horizontally within the container */
+}
+
+/* Container for buttons */
+.container-bottom-user-info {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically within the container */
+}
+
+/* Hover effect for buttons */
+.user-info-button:hover {
+  background-color: #C8B6FF;
+  color: #F9F8F5;
+}
+*/
+
+.user-info-button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #F9F8F5;
+  background-color: #F09581;
+  border: none;
+  width: 82px; /* Set width to create square shape */
+  height: 82px; /* Set height to create square shape */
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px; /* Add margin between buttons */
+}
+
+/* Hover effect for buttons */
+.user-info-button:hover {
+  background-color: #C8B6FF;
+  color: #F9F8F5;
+}
+
+/*event page CSS*/
+
+/* Style for user avatar */
+.avatar-image {
+  border-radius: 50%;
+  max-width: 150px;
+  /* Add any other avatar styling you need */
+}
+
+/* Style for the search container */
+.search-container {
+  background-color: #FCBF49;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-container .search-header p {
+  color: white; /* Text color */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  /* It should now display the text in Quicksand, in bold, and in white */
+}
+
+
+/* Style for the search bars */
+.search-bar {
+  background-color: #F9F8F5;
+  color: #C8B6FF; /* Text color */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.search-bar:focus {
+  color: #C8B6FF; /* Text color when focused */
