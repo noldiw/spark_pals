@@ -1,3 +1,5 @@
+applicationcss
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +15,111 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet');
+ @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet');
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+ body {
+  margin: 0;
+  overflow: hidden;
+  background-color:  #F9F8F5;/* Hide overflow to prevent scrollbars */
+}
+ /* Apply styles to the logo */
+ .logo {
+  font-family: 'League Spartan', sans-serif;/* Use the League Spartan font */
+   font-size: 50px; /* Set the font size to 62.7 pixels */
+   font-weight: bold;
+   color: #000; /* Set the text color (you can change this to your preferred color) */
+   position: absolute;
+   top: 35%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+ }
+ .button-container {
+  text-align: center;
+  position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+}
+
+.button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  background-color: #FCBF49;; /* Button background color */
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  top: 45%;
+  left: 50%;
+}
+
+.button:hover {
+  background-color: #94D2BD; /* Change the background color on hover */
+  color: #fff;
+}
+
+ .background-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.moving-element {
+  position: absolute;
+  width: 100px;
+  height: 68px;
+  background: #FCBF49;
+  border-radius: 15px;
+  animation-duration: 5s; /* Duration of the animation (adjust as needed) */
+  animation-timing-function: linear; /* Linear animation timing */
+}
+
+
+#element1 {
+  left: 0px;
+  top: 538px;
+  animation-name: move1; /* Use a unique animation name for each element */
+  animation-fill-mode: forwards;
+}
+
+#element2 {
+  left: 263px;
+  top: 0px;
+  animation-name: move2;
+  animation-fill-mode: forwards;
+}
+
+.horizontal-move {
+  animation-duration: 60s; /* Adjust the duration for the horizontal movement */
+}
+
+
+@keyframes move1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(100vw - 84px), calc(100vh - 68px));
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(100vw - 84px), calc(100vh - 68px));
+  }
+}
