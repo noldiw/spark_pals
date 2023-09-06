@@ -5,8 +5,7 @@ class CreateList00s < ActiveRecord::Migration[7.0]
       t.references :event, null: false, foreign_key: true
       t.string :title
       t.string :list_type
-      t.string :envent_status
-      t.datetime :created_at
+      t.string :event_status
 
       t.timestamps
     end

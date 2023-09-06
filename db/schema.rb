@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_05_133540) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_05_142550) do
+  create_table "event00s", force: :cascade do |t|
+    t.string "title"
+    t.string "event_type"
+    t.integer "user_id", null: false
+    t.text "event_description"
+    t.datetime "from_datetime"
+    t.datetime "to_datetime"
+    t.string "event_location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_event00s_on_user_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "event_type"
     t.string "event_title"
@@ -22,6 +35,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_133540) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "list00s", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.string "title"
+    t.string "list_type"
+    t.string "event_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_list00s_on_event_id"
+    t.index ["user_id"], name: "index_list00s_on_user_id"
   end
 
   create_table "lists", force: :cascade do |t|
@@ -50,7 +75,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_05_133540) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "event00s", "users"
   add_foreign_key "events", "users"
+  add_foreign_key "list00s", "events"
+  add_foreign_key "list00s", "users"
   add_foreign_key "lists", "events"
   add_foreign_key "lists", "users"
 end
