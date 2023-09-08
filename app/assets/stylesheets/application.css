@@ -218,6 +218,15 @@ body {
 
 /*event page CSS*/
 
+/* Center all elements horizontally and vertically */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust to your desired height */
+}
+
 /* Style for user avatar */
 .avatar-image {
   border-radius: 50%;
@@ -231,18 +240,17 @@ body {
   border-radius: 5px;
   padding: 20px;
   text-align: center;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow effect */
 }
 
+/* Style for the search header */
 .search-container .search-header p {
-  color: white; /* Text color */
+  color: black; /* Text color */
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 18px;
-  /* It should now display the text in Quicksand, in bold, and in white */
+  /* It should now display the text in Quicksand, in bold, and in black */
 }
-
 
 /* Style for the search bars */
 .search-bar {
@@ -256,5 +264,82 @@ body {
   margin: 5px;
 }
 
+/* Style for the text inside the search bars when users type */
 .search-bar:focus {
   color: #C8B6FF; /* Text color when focused */
+  /* Add any other styling for focused state here */
+}
+
+
+/* Event Card */
+/* Styles for the event card container */
+.event-card {
+  position: relative;
+  width: 237px;
+  height: 370px;
+  margin: 20px auto; /* Center horizontally */
+  background: #C8B6FF;
+  border-radius: 20px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Styles for the inner container */
+.event-card-inner {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  background: #F9F8F5;
+  border: 1px solid #000000;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Styles for event details */
+.event-details {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Styles for event title and username */
+.event-details h3 {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #353535;
+}
+
+/* Styles for event info container */
+.event-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles for event info columns */
+.event-info-left,
+.event-info-right {
+  width: 48%; /* Adjust as needed */
+  text-align: left;
+}
+
+/* Styles for event image */
+.event-info-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styles for event description */
+.event-description {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  color: #4D4847;
+}
